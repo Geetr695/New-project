@@ -1,7 +1,7 @@
 import math, time
 
-N = 10000000        # do 10 million square roots
-x = 123.456           # always the same number
+N = 10000000
+x = 123.456
 
 start = time.perf_counter()
 
