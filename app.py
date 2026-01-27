@@ -4,10 +4,10 @@ start_time = time.monotonic()
 duration = 1
 number = 0
 
-with open("output_simple.txt", "w") as file:
-    while(time.monotonic() - start_time) < duration:
-        sqrt_value = math.sqrt(number)
-        number = number + 1
-        file.write(str(sqrt_value) + "\n")
+end_time = start_time + duration
+
+while time.monotonic() < end_time:
+    sqrt_value = math.sqrt(number)
+    number = number + 1
 
 print("Ammount of square roots calculated in one second:", number)
