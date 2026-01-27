@@ -1,13 +1,14 @@
 import math, time
 
-start_time = time.monotonic()
-duration = 1
-number = 0
+N = 10000000        # do 10 million square roots
+x = 123.456           # always the same number
 
-end_time = start_time + duration
+start = time.perf_counter()
 
-while time.monotonic() < end_time:
-    sqrt_value = math.sqrt(number)
-    number = number + 1
+for _ in range(N):
+    math.sqrt(x)
 
-print("Ammount of square roots calculated in one second:", number)
+end = time.perf_counter()
+
+seconds = end - start
+print("Square roots per second:", int(N / seconds))
