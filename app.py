@@ -1,7 +1,7 @@
 import math, time
 
 N = 10000000
-x = 123.456
+x = 1
 
 start = time.perf_counter()
 
